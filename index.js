@@ -39,12 +39,12 @@ function iniciandoJogo(player) {
     // Laço de repetição para iniciar o jogo apenas se a variável "Start" for verdadeira
     while (start) {
         // Variavel para armazenar o retorno do método atacar (armazena o tipo de ataque)
-        const ataque = player.atacar(player.tipo);
+        const ataque = player.atacar();
 
         // Imprime a mensagem na tela
         console.log(`O ${player.tipo} atacou usando ${ataque}`);
 
-        // comando prompt permite o jogador escolher continuar ou sair
+        // comando prompt permite o jogador escolher continuar ou sair (Prompt funciona apenas em navegador)
         const continuar = prompt("Deseja atacar novamente? (sim/não): ");
 
         // Se o jogador responder não o programa encerra
